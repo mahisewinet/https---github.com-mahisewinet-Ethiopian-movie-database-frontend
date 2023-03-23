@@ -1,0 +1,92 @@
+<h4 class="text-center">Create Movie</h4>
+<div style="text-align: center">
+  <h1>{{message}}</h1>
+</div>
+
+<div class="row">
+<div class="conatiner mx-auto col-10 col-md-8 col-lg-6">
+
+    <form>
+      <fieldset>
+        <legend class="text-center">Please Enter Valid information. <span class="text-danger"><small>
+                    required *</small></span></legend>
+      <div class="form-group">
+        <label for="title">Title*</label>
+        <input type="text" class="form-control" id="title" 
+  required [(ngModel)]='movie.title' name="title">
+      </div>
+  
+      <div class="form-group">
+        <label for="year">year*</label>
+        <input type="text" class="form-control" id="year" 
+  required [(ngModel)]="movie.year" name="year">
+      </div>
+  
+      <div class="form-group">
+        <label for="rated">Rated*</label>
+        <input type="text" class="form-control" id="rated" 
+  required [(ngModel)]="movie.rated" name="rated">
+      </div>
+  
+      <div class="form-group">
+        <label for="released">Released*</label>
+        <input type="text" class="form-control" id="released" 
+  required [(ngModel)]="movie.released" name="released">
+      </div>
+  
+      <div class="form-group">
+        <label for="runtime">Runtime*</label>
+        <input type="text" class="form-control" id="runtime" 
+  required [(ngModel)]="movie.runtime" name="runtime">
+      </div>
+  
+      <div class="form-group">
+        <label for="genre">Genre*</label>
+        <input type="text" class="form-control" id="genre" 
+  required [(ngModel)]="movie.genre" name="genre">
+      </div>
+  
+      <div class="form-group">
+        <label for="director">Director*</label>
+        <input type="text" class="form-control" id="director" 
+  required [(ngModel)]="movie.director" name="director">
+      </div>
+
+      <div class="form-group">
+        <label for="writer">Writer*</label>
+        <input type="text" class="form-control" id="writer" 
+  required [(ngModel)]="movie.writer" name="writer">
+      </div>
+
+      <div class="form-group">
+        <label for="actors">Actors*</label>
+        <ul>
+          <li *ngFor="let actor of movie.actors">{{actor}}</li>
+        </ul>
+        <input  type="text" class="form-control" id="actors" 
+  required [(ngModel)]="actorName" name="actorName" rows="3" ngList>
+        <button class="btn btn-primary " (click)="addActor();remove();">
+          Add Actor
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label for="plot">Plot*</label>
+        <textarea class="form-control" id="plot" 
+  required [(ngModel)]="movie.plot" name="plot" rows="5">
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="language">Language*</label>
+        <input type="text" class="form-control" id="language" 
+  required [(ngModel)]="movie.language" name="language">
+      </div>
+
+      <div class="form-group">
+         <button type="submit" class="btn btn-success"  (click)="registerNow()">Submit</button>
+      </div>
+    </fieldset>
+   </form>
+  </div>
+</div>

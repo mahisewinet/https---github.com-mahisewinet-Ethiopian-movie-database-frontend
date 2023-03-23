@@ -1,0 +1,45 @@
+<h2>Employee Details</h2> 
+
+<hr/>
+<div *ngIf="movie">
+  <div>
+    <label><b>ID: </b></label> {{movie.id}}
+  </div>
+  <div>
+    <label><b>Title: </b></label> {{movie.title}}
+  </div>
+  <div>
+    <label><b>Genre: </b></label> {{movie.genre}}
+  </div>  
+  <div>
+    <label><b>Year: </b></label> {{movie.year}}
+  </div>
+  <div>
+    <label><b>Rated: </b></label> {{movie.rated}}
+  </div>
+  <div>
+    <label><b>Released: </b></label> {{movie.released}}
+  </div> 
+  <div>
+    <label><b>Runtime: </b></label> {{movie.runtime}}
+  </div>  
+  <div>
+    <label><b>Director: </b></label> {{movie.director}}
+  </div>
+  <div>
+    <label><b>Writer: </b></label> {{movie.writer}}
+  </div>
+  <div>
+    <label><b>Actors: </b></label> {{movie.actors}}
+  </div>  
+  <div>
+    <label><b>Plot: </b></label> {{movie.plot}}
+  </div>
+  <div>
+    <label><b>Language: </b></label> {{movie.language}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
