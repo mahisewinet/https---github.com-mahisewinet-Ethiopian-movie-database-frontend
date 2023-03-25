@@ -11,19 +11,19 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let movie of movies">
+            <tr *ngFor="let movie of movieList">
                 <td>{{movie.id}}</td>
                 <td>{{movie.title}}</td>
                 <td>{{movie.year}}</td>
-                <td class="text-center">
-                    <button class="btn btn-danger btn-xs" (click)="delete(movie.id)"> Delete</button>
+                <!--  <td class="text-center">
+                    <button class="btn btn-danger btn-xs" (click)="delete(movieList.id)"> Delete</button>
                 </td>
                 <td class="text-center">
-                    <button class="btn btn-primary btn-xs" (click)="delete(movie.id)"> Update</button>
+                    <button class="btn btn-primary btn-xs" (click)="delete(movieList.id)"> Update</button>
                 </td>
                 <td class="text-center">
-                    <button class="btn btn-primary btn-xs" (click)="movieDetails(movie.title)"> Details</button>
-                </td>
+                    <button class="btn btn-primary btn-xs" (click)="movieDetails(movie.title)"> Details</button> 
+                </td> -->
             </tr>
         </tbody>
         </table>

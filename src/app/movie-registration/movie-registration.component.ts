@@ -19,7 +19,8 @@ export class MovieRegistrationComponent {
 
   public registerNow(){
     let resp= this.service.registerMovie(this.movie);
-    resp.subscribe( (data: any) => this.message=data);
+    resp.subscribe( (data: any) => this.movie=data);
+    this.movie= new Movie("","","","","","","","","",[],"","");
   }
 
   addActor(){
